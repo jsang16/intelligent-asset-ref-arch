@@ -96,3 +96,23 @@ th, td {
 [data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
     background-color: hsla(var(--md-hue),25%,25%,1)
 }
+
+.md-button.diff-line {
+    display: block;
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+@media (max-width: 2000px) {
+
+    .md-button.diff-line {
+        display: block;
+        width: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+}
+/* .md-button.collapse-line {
+    width: 200px;
+} */

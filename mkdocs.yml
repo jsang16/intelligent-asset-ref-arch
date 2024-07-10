@@ -5,17 +5,17 @@
 INHERIT: ./base.yml
 
 # Project Information
-site_name: "CognitiveArchitectHandbookName"
-site_url: "https://pages.github.ibm.com/CognitiveArchitectRepoParent/CognitiveArchitectRepoDir/"
-site_description: "CognitiveArchitectSiteDescription"
-site_author: "CognitiveArchitectSiteAuthor"
+site_name: "Intelligent Asset Reference Architecture"
+site_url: "https://pages.github.ibm.com/jsang16/intelligent-asset-ref-arch/"
+site_description: "Intelligent Asset Reference Architecture"
+site_author: "jsang16"
 
 # Repository Information
-repo_name: 'CognitiveArchitectRepoParent/CognitiveArchitectRepoDir'
-repo_url: 'https://github.ibm.com/CognitiveArchitectRepoParent/CognitiveArchitectRepoDir'
+repo_name: 'jsang16/intelligent-asset-ref-arch'
+repo_url: 'https://github.ibm.com/jsang16/intelligent-asset-ref-arch'
 
 # Copyright
-#copyright: <a href="/about/">CognitiveArchitectSiteAuthor</a>.
+#copyright: <a href="/about/">jsang16</a>.
 
 # Customize Handbook Template information visibility
 oic_handbook:
@@ -57,8 +57,8 @@ markdown_extensions:
       repo_url_shortener: true
       repo_url_shorthand: false
       social_url_shorthand: true
-      user: CognitiveArchitectIBMGitHub
-      repo: CognitiveArchitectRepoParent/CognitiveArchitectRepoDir
+      user: jsang16
+      repo: jsang16/intelligent-asset-ref-arch
   toc:
       permalink: true
       toc_depth: 6
@@ -69,13 +69,13 @@ plugins:
       tags_file: tags.md
 #   # Configure the PDF export plugin - see https://github.com/zhaoterryy/mkdocs-pdf-export-plugin
 #   with-pdf: # This creates a single PDF document for the whole site
-#       author: CognitiveArchitectSiteAuthor
-#       copyright: Copyright &copy; CognitiveArchitectSiteAuthor
+#       author: jsang16
+#       copyright: Copyright &copy; jsang16
 #       cover: true
 #       back_cover: false
 #       #
-#       cover_title: CognitiveArchitectHandbookName
-#       cover_subtitle: CognitiveArchitectSiteDescription
+#       cover_title: Intelligent Asset Reference Architecture
+#       cover_subtitle: Intelligent Asset Reference Architecture
 #       cover_logo: 'theme/logo-ibm-dark.png'
 #       #custom_template_path: TEMPLATES PATH
 #       #
@@ -101,7 +101,7 @@ plugins:
 #       # render_js: true
 #       #headless_chrome_path: headless-chromium
 #       #
-#       output_path: ./pdf/CognitiveArchitectRepoDir.pdf
+#       output_path: ./pdf/intelligent-asset-ref-arch.pdf
 #       enabled_if_env: ENABLE_PDF_EXPORT
 #       #
 #       debug_html: true
