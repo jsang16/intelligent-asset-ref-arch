@@ -1,0 +1,97 @@
+
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+
+<% if (data.description) { %>
+### Issue Description
+
+<%- data.description %>
+<% } %>
+
+
+
+<% if (data.bu) { %>
+### BU / Department / Competency
+
+<%- data.bu %>
+<% } %>
+
+
+
+<% if (data.raisedBy) { %>
+### Raised by
+
+<%- data.raisedBy %>
+<% } %>
+
+
+
+<% if (data.issueResponsibility) { %>
+### Owner
+
+<%- data.issueResponsibility %>
+<% } %>
+
+
+
+<% if (data.priority) { %>
+### Priority
+
+<%- data.priority %>
+<% } %>
+
+
+
+<% if (data.action) { %>
+### Action
+
+<%- data.action %>
+<% } %>
+
+
+
+<% if (data.raisedDate) { %>
+### Date Raised
+
+<%- data.raisedDate %>
+<% } %>
+
+
+
+<% if (data.reviewDate) { %>
+### Review Date
+
+<%- data.reviewDate %>
+<% } %>
+
+
+
+<% if (data.closedDate) { %>
+### Date Closed
+
+<%- data.closedDate %>
+<% } %>
+
+
+
+<% if (data.comments) { %>
+### Comments
+
+<%- data.comments %>
+<% } %>
+
+
+<% if (data.isKey) { %>
+### Is this a Key Issue?
+
+<%- data.isKey %>
+<% } %>
+
+
+<% if (data.isExternal) { %>
+### External
+
+<%- data.isExternal %>
+<% } %>

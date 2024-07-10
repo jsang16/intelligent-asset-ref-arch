@@ -1,0 +1,99 @@
+
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+
+<% if (data.description) { %>
+### Risk Description
+
+<%- data.description %>
+<% } %>
+
+
+<% if (data.bu) { %>
+### BU / Department / Competency
+
+<%- data.bu %>
+<% } %>
+
+
+
+<% if (data.personResponsible) { %>
+### Owner
+
+<%- data.personResponsible %>
+<% } %>
+
+
+
+<% if (data.probability) { %>
+### Probability
+
+<%- data.probability %>
+<% } %>
+
+
+
+<% if (data.impact) { %>
+### Impact
+
+<%- data.impact %>
+<% } %>
+
+
+
+<% if (data.effort) { %>
+### Effort / Cost
+
+<%- data.effort %>
+<% } %>
+
+
+<% if (data.recommendation) { %>
+### Contingency / Mitigation recommendation
+
+<%- data.recommendation %>
+<% } %>
+
+
+<% if (data.raisedDate) { %>
+### Date Raised
+
+<%- data.raisedDate %>
+<% } %>
+
+
+<% if (data.reviewDate) { %>
+### Review Date
+
+<%- data.reviewDate %>
+<% } %>
+
+
+<% if (data.closedDate) { %>
+### Date Closed
+
+<%- data.closedDate %>
+<% } %>
+
+
+
+<% if (data.comments) { %>
+### Comments
+
+<%- data.comments %>
+<% } %>
+
+
+<% if (data.isKey) { %>
+### Is this a Key Risks?
+
+<%- data.isKey %>
+<% } %>
+
+<% if (data.isExternal) { %>
+### External
+
+<%- data.isExternal %>
+<% } %>

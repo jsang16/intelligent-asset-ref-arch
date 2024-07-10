@@ -1,0 +1,45 @@
+---
+tags:
+    - AOD-Usage
+---
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+![<%- data.name %>](<%- "URL_" + data._id + ".svg" %>)
+
+
+
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+<% if (data.reference && data.reference.length > 0) { %>
+### Reference(s)
+
+    <% data.reference.forEach(reference => { %>
+        <% if (reference.name && reference.url) { %>
+[<%- reference.name %>](<%- reference.url %>)
+        <% } else { %>
+[<%- reference.url %>](<%- reference.url %>)
+         <% } %>
+    <% }) %>
+<% } %>
+
+
+
+<% if (data.usageSteps.length > 0) { %>
+
+
+## Step List
+
+| Name | Description |
+| --- | --- | 
+<% data.usageSteps.forEach(function(ele){ %> | <%- ele.name %> | <%- ele.description %> |
+<% }); %>
+    
+<% } %>

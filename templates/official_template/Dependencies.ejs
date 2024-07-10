@@ -1,0 +1,86 @@
+
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+
+<% if (data.description) { %>
+### Dependency Description
+
+<%- data.description %>
+<% } %>
+
+
+
+<% if (data.bu) { %>
+### BU / Department / Competency
+
+<%- data.bu %>
+<% } %>
+
+
+
+<% if (data.owner) { %>
+### Owner
+
+<%- data.owner %>
+<% } %>
+
+
+
+<% if (data.effectOnPlan) { %>
+### Effect on Plan
+
+<%- data.effectOnPlan %>
+<% } %>
+
+
+
+<% if (data.requiredByDate) { %>
+### Required by Date
+
+<%- data.requiredByDate %>
+<% } %>
+
+
+
+<% if (data.associatedRiskId) { %>
+### Associated Risk ID
+
+<%- data.associatedRiskId %>
+<% } %>
+
+
+<% if (data.raisedDate) { %>
+### Date Raised
+
+<%- data.raisedDate %>
+<% } %>
+
+<% if (data.closedDate) { %>
+### Date Closed
+
+<%- data.closedDate %>
+<% } %>
+
+
+
+<% if (data.comments) { %>
+### Comments
+
+<%- data.comments %>
+<% } %>
+
+
+<% if (data.isKey) { %>
+### Is this a Key Dependency?
+
+<%- data.isKey %>
+<% } %>
+
+
+<% if (data.isExternal) { %>
+### External
+
+<%- data.isExternal %>
+<% } %>

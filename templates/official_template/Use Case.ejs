@@ -1,0 +1,56 @@
+
+# <%- data.tocPosition %> <%- data.id %> - <%- data.name %>
+
+<% if (data.ucPackage) { %>
+### Package Name
+
+<%- data.ucPackage %>
+<% } %>
+
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+<% if (data.actors.length > 0) { %>
+### Actor(s)
+
+| Name | Description | Type | GenericGroup |
+| --- | --- | --- | --- |
+<% data.actors.forEach(function(ele){ %>| <%- ele.name %> | <%- ele.description %> | <%- ele.type %> | <% if (data.genericGroup && data.genericGroup[ele._id]) { %><% data.genericGroup[ele._id].forEach(gg=> { %><div><strong><%- gg.category %>,<%- gg.name %></strong>[<%- gg.type %>]</div><div><%- gg.description %></div><% }) %><% } %> |
+<% }); %>
+<% } %>
+
+
+<% if (data.preconditions) { %>
+### Pre-Conditions
+
+<%- data.preconditions %>
+<% } %>
+
+<% if (data.basicFlow) { %>
+### Basic Flow
+
+<%- data.basicFlow %>
+<% } %>
+
+<% if (data.alternativeFlows) { %>
+### Alternate Flows
+
+<%- data.alternativeFlows %>
+<% } %>
+
+<% if (data.successfulOutcomes) { %>
+### Successful Outcomes
+
+<%- data.successfulOutcomes %>
+<% } %>
+
+<% if (data.failureOutcomes) { %>
+### Failure Outcomes
+
+<%- data.failureOutcomes %>
+<% } %>

@@ -1,0 +1,56 @@
+<% if (data.tocPosition) { %>
+# <%- data.tocPosition %> System Context
+<% } %>
+
+<% if (data.name) { %>
+### Name
+
+<%- data.name %>
+<% } %>
+
+
+![<%- data.name %>](<%- "URL_" + data._id + ".svg" %>)
+
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+<% if (data.reference && data.reference.length > 0) { %>
+### Reference(s)
+
+    <% data.reference.forEach(reference => { %>
+        <% if (reference.name && reference.url) { %>
+[<%- reference.name %>](<%- reference.url %>)
+        <% } else { %>
+[<%- reference.url %>](<%- reference.url %>)
+         <% } %>
+    <% }) %>
+<% } %>
+
+
+<% if (data.targetSystems.length > 0 || data.actors.length > 0 ) { %>
+## Element(s)
+
+<% if (data.targetSystems.length > 0) { %>
+### Target System(s)
+
+| Name | Description |
+| --- | --- |
+<% data.targetSystems.forEach(function(ele){ %> | <%- ele.name %> | <%- ele.description.replace(/>(https?[^<]*)<\/a>/g, '>`$1`</a>') %> |
+<% }); %>
+<% } %>
+
+<% if (data.actors.length > 0) { %>
+### Actor(s)
+
+| Name | Description | Type | GenericGroup |
+| --- | --- | --- | --- |
+<% data.actors.forEach(function(ele){ %> | <%- ele.name %> | <%- ele.description %> | <%- ele.type %> | <% if (data.genericGroup && data.genericGroup[ele._id]) { %><% data.genericGroup[ele._id].forEach(gg=> { %><div><strong><%- gg.category %>,<%- gg.name %></strong>[<%- gg.type %>]</div><div><%- gg.description %></div><% }) %><% } %> |
+<% }); %>
+<% } %>
+
+<% } %>

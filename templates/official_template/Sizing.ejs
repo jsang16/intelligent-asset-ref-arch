@@ -1,0 +1,14 @@
+
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+<% if (data.labels.length > 0) { %>
+<% data.labels.forEach(label => { %>
+`<%- label %>`<% }) %>
+<% } %>
+
+
+<% if (data.content) { %>
+<%- data.content %>
+<% } %>

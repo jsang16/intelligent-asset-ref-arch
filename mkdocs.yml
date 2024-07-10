@@ -1,0 +1,109 @@
+# EDIT THIS FILE TO CUSTOMIZE THE HANDBOOK
+# See: https://github.ibm.com/oic/handbook-template/wiki/User-Guide for details
+
+# Inherit config from base
+INHERIT: ./base.yml
+
+# Project Information
+site_name: "CognitiveArchitectHandbookName"
+site_url: "https://pages.github.ibm.com/CognitiveArchitectRepoParent/CognitiveArchitectRepoDir/"
+site_description: "CognitiveArchitectSiteDescription"
+site_author: "CognitiveArchitectSiteAuthor"
+
+# Repository Information
+repo_name: 'CognitiveArchitectRepoParent/CognitiveArchitectRepoDir'
+repo_url: 'https://github.ibm.com/CognitiveArchitectRepoParent/CognitiveArchitectRepoDir'
+
+# Copyright
+#copyright: <a href="/about/">CognitiveArchitectSiteAuthor</a>.
+
+# Customize Handbook Template information visibility
+oic_handbook:
+  #template_display_info: false    # version information in the footer, defaults to true in base.yml
+  instana_key: 'SwqWI68BRyCMhG-g5zgsAA'
+  extra_javascript:
+    - 'customized_theme/extra.js'
+  extra_css:
+    - 'customized_theme/extra.css'
+
+# Provide some control over theme features.  Comment or un-comment as needed.
+theme:
+  language: en
+  features:
+    #- announce.dismiss        # Button to dismiss the current temporary announcement
+    #- content.action.edit
+    # - content.action.feedback
+    # - content.action.view
+    # - content.tabs.link
+    # - navigation.expand     # expand left sidebar by default
+    - navigation.indexes      # attach documents to sections, useful for providing overview pages
+    - navigation.instant      # Single page instant refresh
+    # - navigation.sections     # top level tabs rendered in sidebar
+    #- navigation.tabs         # Navigation tabs across top. Comment this out to have navigation on the left
+    #- navigation.tabs.sticky  # tab always displayed
+    - navigation.top          # Backup to top button at bottom right
+    - navigation.tracking     # URL updated with active anchor
+    - search.share
+    - search.suggest
+    #- toc.integrate           # Integrate page TOC in left sidebar - wider page
+  icon:    
+    admonition: 
+      note: material/information  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/?h=admonitions#admonition-icons
+    edit: 'material/pencil-outline'
+
+markdown_extensions:
+  pymdownx.magiclink:
+      provider: 'github'
+      repo_url_shortener: true
+      repo_url_shorthand: false
+      social_url_shorthand: true
+      user: CognitiveArchitectIBMGitHub
+      repo: CognitiveArchitectRepoParent/CognitiveArchitectRepoDir
+  toc:
+      permalink: true
+      toc_depth: 6
+
+plugins:
+  # Allow Tags on the pages - see https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
+  tags:
+      tags_file: tags.md
+#   # Configure the PDF export plugin - see https://github.com/zhaoterryy/mkdocs-pdf-export-plugin
+#   with-pdf: # This creates a single PDF document for the whole site
+#       author: CognitiveArchitectSiteAuthor
+#       copyright: Copyright &copy; CognitiveArchitectSiteAuthor
+#       cover: true
+#       back_cover: false
+#       #
+#       cover_title: CognitiveArchitectHandbookName
+#       cover_subtitle: CognitiveArchitectSiteDescription
+#       cover_logo: 'theme/logo-ibm-dark.png'
+#       #custom_template_path: TEMPLATES PATH
+#       #
+#       toc_title: Contents
+#       # heading_shift: false
+#       toc_level: 2
+#       #ordered_chapter_level: 2
+#       #excludes_children:
+#       #    - 'release-notes/:upgrading'
+#       #    - 'release-notes/:changelog'
+#       #
+#       exclude_pages:
+#           - '99.about/'
+#           - 'blog'
+#       #    - 'appendix/contribute/'
+#       #convert_iframe:
+#       #    - src: IFRAME SRC
+#       #      img: POSTER IMAGE URL
+#       #      text: ALTERNATE TEXT
+#       #    - src: ...
+#       #two_columns_level: 3
+#       #
+#       # render_js: true
+#       #headless_chrome_path: headless-chromium
+#       #
+#       output_path: ./pdf/CognitiveArchitectRepoDir.pdf
+#       enabled_if_env: ENABLE_PDF_EXPORT
+#       #
+#       debug_html: true
+#       #show_anchors: true
+#       verbose: false

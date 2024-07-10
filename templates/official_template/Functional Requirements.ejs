@@ -1,0 +1,48 @@
+
+# <%- data.tocPosition %> <%- data.id %> - <%- data.name %>
+
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+<% if (data.impact) { %>
+### Impact
+
+<%- data.impact %>
+<% } %>
+
+
+<% if (data.weight) { %>
+### Weight
+
+<%- data.weight %>
+<% } %>
+
+
+<% if (data.owner) { %>
+### Owner
+
+<%- data.owner %>
+<% } %>
+
+
+<% if (data.logicalComponents.length > 0) { %>
+
+### Logical Component(s)
+
+| Name | Description |
+| --- | --- |
+<% data.logicalComponents.forEach(function(lc){ %> | <%- lc.name %> | <%- lc.description %> |
+    <% }); %>
+<% } %>
+
+
+<% if (data.reviewDate) { %>
+### Review Date
+
+<%- data.reviewDate %>
+<% } %>

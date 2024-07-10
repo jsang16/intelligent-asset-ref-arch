@@ -1,0 +1,97 @@
+
+
+# <%- data.mdtitle %>
+
+<div style="text-align: left">For the latest updates, go to 
+    <a href="<%- data.serverHost %>/architectures/Social/<%- data.archId %>"><%-data.appName%></a>.
+</div>
+
+| Architecture Name | Type | Shared As-Is? | isDiscoverable |
+| --- | --- | --- | --- |
+| [<%- data.name %>](<%- data.serverLink %>) | <%- data.type %> | <%- data.isAsIs %> | <%- data.isDiscoverable %>|
+
+
+<% if (data.clientName) { %>
+### Client Name
+
+<%- data.clientName %>
+<% } %>
+
+
+<% if (data.salesConnectNum) { %>
+### Opportunity Number
+
+<%- data.salesConnectNum %>
+<% } %>
+
+
+
+<% if (data.industries.length > 0) { %>
+### Industry
+
+<% data.industries.forEach(element => { %>
+<%- element %>  <% }) %>
+<% } %>
+
+
+
+<% if (data.technologies.length > 0) { %>
+### Technology
+
+<% data.technologies.forEach(element => { %>
+<%- element %>  <% }) %>
+<% } %>
+
+
+
+<% if (data.businessObjectives.length > 0) { %>
+### Business Objectives
+
+<% data.businessObjectives.forEach(element => { %>
+<%- element %>  <% }) %>
+<% } %>
+
+
+
+<% if (data.technicalChallenges.length > 0) { %>
+### Technical Challenges
+
+<% data.technicalChallenges.forEach(element => { %>
+<%- element %>  <% }) %>
+<% } %>
+
+
+
+<% if (data.tags.length > 0) { %>
+### Tag
+
+<% data.tags.forEach(element => { %>
+<%- element %>  <% }) %>
+<% } %>
+
+
+
+<% if (data.owner) { %>
+### Owner
+
+User ID: &nbsp; &nbsp; &nbsp; <%- data.owner.fullname %>  
+Job Role: &nbsp; &nbsp; <%- data.owner.jobResponsibilities %>  
+Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%- data.owner._id %>  
+<% } %>
+
+
+
+<% if (data.lastModifiedUser) { %>
+### Last modified by
+
+User ID: &nbsp; &nbsp; &nbsp; <%- data.lastModifiedUser.fullname %>  
+Job Role: &nbsp; &nbsp; <%- data.lastModifiedUser.jobResponsibilities %>  
+Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%- data.lastModifiedUser._id %>  
+<% } %>
+
+
+<% if (data.lastModified) { %>
+### Last modified date
+
+<%- data.lastModified %>
+<% } %>

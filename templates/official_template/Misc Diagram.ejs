@@ -1,0 +1,43 @@
+---
+tags:
+    - MISC
+---
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+## Diagram
+
+![<%- data.name %>](<%- "URL_" + data._id + ".svg" %>)
+
+
+
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+
+<% if (data.reference && data.reference.length > 0) { %>
+### Reference(s)
+
+    <% data.reference.forEach(reference => { %>
+        <% if (reference.name && reference.url) { %>
+[<%- reference.name %>](<%- reference.url %>)
+        <% } else { %>
+[<%- reference.url %>](<%- reference.url %>)
+         <% } %>
+    <% }) %>
+<% } %>
+
+
+
+<% if (data.labels.length > 0) { %>
+### Label(s)
+
+<% data.labels.forEach(label => { %>
+`<%- label %>`<% }) %>
+<% } %>

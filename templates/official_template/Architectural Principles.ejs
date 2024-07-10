@@ -1,0 +1,56 @@
+
+<% if (data.name) { %>
+# <%- data.tocPosition %> <%- data.name %>
+<% } %>
+
+
+<% if (data.subjectArea) { %>
+### Subject Area
+
+<%- data.subjectArea %>
+<% } %>
+
+
+
+<% if (data.topic) { %>
+### Topic
+
+<%- data.topic %>
+<% } %>
+
+<% if (data.priority) { %>
+### Ranked Priority
+
+<%- data.priority %>
+<% } %>
+
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+
+<% if (data.rationale) { %>
+### Rationale
+
+<%- data.rationale %>
+<% } %>
+
+
+
+<% if (data.implications) { %>
+### Implications
+
+<%- data.implications %>
+<% } %>
+
+
+
+<% if (data.metrics) { %>
+### Metrics
+
+<%- data.metrics %>
+<% } %>

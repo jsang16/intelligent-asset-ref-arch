@@ -1,0 +1,56 @@
+---
+tags:
+    - CM-Seq
+---
+
+# <%- data.tocPosition %> <%- data.name %>
+
+
+![<%- data.name %>](<%- "URL_" + data._id + ".svg" %>)
+
+<% if (data.description) { %>
+### Description
+
+<%- data.description %>
+<% } %>
+
+
+<% if (data.reference && data.reference.length > 0) { %>
+### Reference(s)
+
+    <% data.reference.forEach(reference => { %>
+        <% if (reference.name && reference.url) { %>
+[<%- reference.name %>](<%- reference.url %>)
+        <% } else { %>
+[<%- reference.url %>](<%- reference.url %>)
+         <% } %>
+    <% }) %>
+<% } %>
+
+
+<% if (data.timelines.length > 0 || data.componentMessages.length > 0 ) { %>
+## Element
+
+
+<% if (data.timelines.length > 0) { %>
+### Timeline(s)
+
+| Name | Description |
+| --- | --- | 
+<% data.timelines.forEach(function(ele){ %> | <%- ele.name %> | <%- ele.description %> |
+<% }); %>
+    
+<% } %>
+
+
+<% if (data.componentMessages.length > 0) { %>
+### Component Message(s)
+
+| Name | Description | Type |
+| --- | --- | --- |
+<% data.componentMessages.forEach(function(ele){ %> | <%- ele.name %> | <%- ele.description.replace(/>(https?[^<]*)<\/a>/g, '>`$1`</a>') %> | <%- ele.type %> |
+<% }); %>
+    
+<% } %>
+
+<% } %>
